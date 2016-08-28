@@ -11924,8 +11924,9 @@ Standard deviation of prices: $165,171.13
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong>As per my intution</p>
-<p><strong>RM</strong>(average number of rooms per dwelling):Acording to rooms per dwelling. More the number of rooms means bigger the house, In rare case even there are high number of rooms didn't affect the size of the house.That makes to have some more information to consider the size of house with respect to number of rooms.</p>
-<p><strong>LSTAT</strong>(% lower status of the population):As per consideration of the homeowners in the neighbourhood considered "lower class"(working poor).Will influence a very little affect on the <strong>MEDV</strong>.But with respect to the population Higher or Lower the percentage of particular class will affect the <strong>MEDV</strong>.</p>
+<p><strong>RM</strong>(average number of rooms per dwelling):Acording to rooms per dwelling. More the number of rooms means bigger the house, In rare case even there are high number of rooms didn't affect the size of the house.That makes to have some more information to consider the size of house with respect to number of rooms.MEDV may affect positively when the RM increases.</p>
+<p><strong>LSTAT</strong>(% lower status of the population):LSTAT ratio may not have an effect of the price of a given house but if there are more "lower classes"
+homes around a house might give as an indication about the price of the house.</p>
 <p><strong>PTRATIO</strong>(pupil-teacher ratio by town):With respect to the ratio of students to teachers in primary and secondary schools will not affect the <strong>MEDV</strong> a lot only with neighbourhood data set.</p>
 
 </div>
@@ -12057,7 +12058,7 @@ Standard deviation of prices: $165,171.13
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong>I wiil not consider this model to have successfully captured the variation of the target variable.Because the <strong>*R^2</strong> score which we got is <strong>*0.923</strong> which is not appropriate for a Regression model.For a constant model that predicts the expected value of <strong>True Value</strong> disregarding the input features would get the <strong>R^2</strong> score very near to 0</p>
+<p><strong>Answer:</strong>I wiil not consider this model to have successfully captured the variation of the target variable with only R^2 Score.R^2 looks at how well a model fits the data.R^2 is not an error metric instead it usually outputs a value between 0-1 that gives an indication of the explained variance.</p>
 
 </div>
 </div>
@@ -13243,7 +13244,7 @@ YII=
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong></p>
-<p>I would go with Learning curve at <strong>max_depth=10</strong>. As the traning set increases the traning error will remain very low (probabily around 1).The Testing Error will be improved as the trainig set increases (probabily nearing 1).Yes, more training points benefits the model.</p>
+<p>I would go with Learning curve at <strong>max_depth=10</strong>. As the size of the training set increases, the training error increases, the testing error decreases.</p>
 
 </div>
 </div>
@@ -13827,7 +13828,7 @@ RU5ErkJggg==
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong></p>
-<p>K-fold cross validation is one way to improve over the holdout method. The data set is divided into k subsets, and the holdout method is repeated k times. Each time, one of the k subsets is used as the test set and the other k-1 subsets are put together to form a training set.Since Grid Search takes the list of all possible combinations of parameters on test data and gets the best performance of the model. K-fold splits the data K subset and implements in the model will give a most optimized parameter for the model.</p>
+<p>Cross-validation divides the data into K blocks, the model is fitted on K-1 blocks and tested on the remaining block. Each block plays the role of validation data in turn. This results in K different estimates for the prediction error. Their average is the cross-validation estimate.Cross-validation is helpful to avoid overfitting, because it trains data many times, which will avoid the situation that training set is accidently imbalanced because of random splitting.Cross validation is also helpful because of maximazing usage of data when data is limited.</p>
 
 </div>
 </div>
@@ -14047,7 +14048,7 @@ Predicted selling price for Client 3&#39;s home: $955,500.00
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong></p>
-<p>Client 1 home:$413619.23, Client 2 home:$232186.96 and Client 3 home:$955500.00 prices  would  be  recommended  with  respect  to  the  statistics  calculated  in  the  Data  Exploration  Mean:$454342.00,  Minimum  price:$105000.00  and  Maximum  price:1024800.00</p>
+<p>The predicted selling price for Clients are reasonable as per the statistics calculated for the given data.The prices are affected by the features Number of rooms in house and Neighborhood poverty level.By comparing the predicted selling price with Maximum price, Minimum price and Mean price of the house</p>
 
 </div>
 </div>
