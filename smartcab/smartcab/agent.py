@@ -104,7 +104,7 @@ class LearningAgent(Agent):
         else:
             self.y_trials[self.trials] = 1
         # TODO: Learn policy based on state, action, reward
-        #print "LearningAgent.update(): deadline = {}, inputs = {}, action = {}, reward = {}".format(deadline, inputs, action, reward)  # [debug]
+        print "LearningAgent.update(): deadline = {}, inputs = {}, action = {}, reward = {}".format(deadline, inputs, action, reward)  # [debug]
 
 
 def run():
